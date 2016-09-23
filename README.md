@@ -1,8 +1,8 @@
-#Grunth 
+#Caeleb
 
-##Logger Middleware for Fold.js
+##Middleware abstraction layer 
 
-![Image of Grunth](http://icons.iconarchive.com/icons/flameia/xrabbit/128/System-Apps-Font-Book-icon.png)
+![Image of Grunth](https://d13yacurqjgara.cloudfront.net/users/541438/screenshots/2156836/untitled-3_1x.png)
 
 
 
