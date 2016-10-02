@@ -17,17 +17,16 @@ built over known and proven libraries it is a battle hardened library being used
 
 creating the middleware consists of three steps
 
-* **Create the exchange**
+* **1.1 Create the exchange**
 
 ```js
 const exchange = rabbit.createExchange(name,options);
 ```
 for available options checkout the amqp library 
 
+* **example**
+
 ```js
-
-example
-
 const exchange = rabbit.createExchange("jibreel.exchange.electric",{"type": "topic"});
 ```
 
