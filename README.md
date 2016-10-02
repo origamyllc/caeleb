@@ -15,34 +15,18 @@ built over known and proven libraries it is a battle hardened library being used
 
 ###Create The Middleware
 
+creating the middleware consists of three steps
+
+* **Create the exchanges**
+
 ```js
-{
-   "exchanges":[{
-      "id":1,
-      "name":"jibreel.exchange.electric",
-      "options":{"type": "topic"}
-   }],
-   "queues":[{
-     "id":2,
-     "name":"jibreel.queue.tesla",
-     "options":{},
-     "binding": {
-       "exchange": "jibreel.exchange.electric",
-       "key": "tesla"
-     }
-    },
-     {
-       "id":3,
-       "name":"jibreel.queue.prius",
-       "options":{},
-       "binding": {
-         "exchange": "jibreel.exchange.electric",
-         "key": "prius"
-       }
-     }
-   ]
- }
+rabbit.createExchange("jibreel.exchange.electric",{"type": "topic"});
 ```
+
+* **Create the queues**
+* **Bind the queues to the exchanges **
+
+
 
 we are actively adding more features to the library and will inform you of new releases
 as and when they are made
