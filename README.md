@@ -4,9 +4,10 @@
 
 a middleware abstration layer  
 
-Cache cow simplifies managing key value stores abstracting away caching from the application logic currently supported key value stores are
+Caeleb simplifies managing Middleware abstracting away publish subscribe and streaming thus allowing the ability to handle back pressure and realtime communication with client current abstractions supported are 
 
-Local(lru-cache)
-Redis
-cachecow allows for asynchronous call to cache using promises .built over known and proven libraries it is a battle hardened library being used at monkeypatched.
+Rabbitmq
+Socket.io
+
+built over known and proven libraries it is a battle hardened library being used at monkeypatched.
 
