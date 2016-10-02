@@ -13,7 +13,7 @@ built over known and proven libraries it is a battle hardened library being used
 
 ##Rabbitmq API
 
-###Create The Middleware
+###Creating The Middleware
 
 creating the middleware consists of three steps
 
@@ -35,7 +35,11 @@ const queue = rabbit.registerQueue("jibreel.queue.tesla","jibreel.exchange.elect
 rabbit.init(exchange,queue);
 ```
 
+###Publishing to an exchange
 
+```js
+rabbit.publish("tesla",{"ping":"yo"});
+```
 
 
 
