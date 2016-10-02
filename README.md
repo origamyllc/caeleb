@@ -12,13 +12,32 @@ Caeleb simplifies managing Middleware abstracting away publish subscribe and str
 built over known and proven libraries it is a battle hardened library being used at monkeypatched.
 
 ```js
-request
-  .get('http://google.com/img.png')
-  .on('response', function(response) {
-    console.log(response.statusCode) // 200
-    console.log(response.headers['content-type']) // 'image/png'
-  })
-  .pipe(request.put('http://mysite.com/img.png'))
+{
+   "exchanges":[{
+      "id":1,
+      "name":"jibreel.exchange.electric",
+      "options":{"type": "topic"}
+   }],
+   "queues":[{
+     "id":2,
+     "name":"jibreel.queue.tesla",
+     "options":{},
+     "binding": {
+       "exchange": "jibreel.exchange.electric",
+       "key": "tesla"
+     }
+    },
+     {
+       "id":3,
+       "name":"jibreel.queue.prius",
+       "options":{},
+       "binding": {
+         "exchange": "jibreel.exchange.electric",
+         "key": "prius"
+       }
+     }
+   ]
+ }
 ```
 
 we are actively adding more features to the library and will inform you of new releases
