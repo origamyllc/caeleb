@@ -11,6 +11,10 @@ Caeleb simplifies managing Middleware abstracting away publish subscribe and str
 
 built over known and proven libraries it is a battle hardened library being used at monkeypatched.
 
+##Rabbitmq API
+
+###Create The Middleware
+
 ```js
 {
    "exchanges":[{
