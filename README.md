@@ -17,14 +17,25 @@ built over known and proven libraries it is a battle hardened library being used
 
 creating the middleware consists of three steps
 
-* **Create the exchanges**
+* **Create the exchange**
 
 ```js
 rabbit.createExchange("jibreel.exchange.electric",{"type": "topic"});
 ```
 
-* **Create the queues**
-* **Bind the queues to the exchanges **
+* **Create the queue**
+
+```js
+rabbit.registerQueue("jibreel.queue.tesla","jibreel.exchange.electric","tesla");
+```
+
+* **Bind the queues to the exchanges**
+
+```js
+rabbit.init(_exchanges, _queues);
+```
+
+
 
 
 
