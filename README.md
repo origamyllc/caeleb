@@ -67,7 +67,7 @@ rabbit.publish(queue_name,routing_key);
  
 ```js
 rabbit.subscribe("jibreel.queue.tesla","tesla");
- */
+
 ```
 
 
