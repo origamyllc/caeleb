@@ -89,8 +89,7 @@ const  connection = amqp.createConnection(options);
                     let obj = {};
                     _queues[ value.name ] = value;
                     queues[key] = _queues;
-                    console.log( queues )
-                   resolve(queues);
+                    resolve(queues);
                 });
         }
 
