@@ -11,6 +11,16 @@ Caeleb simplifies managing Middleware abstracting away publish subscribe and str
 
 built over known and proven libraries it is a battle hardened library being used at monkeypatched.
 
+```js
+request
+  .get('http://google.com/img.png')
+  .on('response', function(response) {
+    console.log(response.statusCode) // 200
+    console.log(response.headers['content-type']) // 'image/png'
+  })
+  .pipe(request.put('http://mysite.com/img.png'))
+```
+
 we are actively adding more features to the library and will inform you of new releases
 as and when they are made
 
