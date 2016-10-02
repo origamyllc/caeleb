@@ -20,7 +20,7 @@ creating the middleware consists of three steps
  **1.1 Create the exchange**
 
 ```js
-const exchange = rabbit.createExchange(name,options);
+const exchange = rabbit.createExchange(exchange_name,options);
 ```
 for available options checkout the amqp library 
 
@@ -32,6 +32,11 @@ const exchange = rabbit.createExchange("jibreel.exchange.electric",{"type": "top
 
  **1.2 Create the queue**
 
+```js
+const exchange = rabbit.registerQueue(queue_name,exchange_name,routing_key);
+```
+ **example**
+ 
 ```js
 const queue = rabbit.registerQueue("jibreel.queue.tesla","jibreel.exchange.electric","tesla");
 ```
