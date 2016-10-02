@@ -13,13 +13,21 @@ built over known and proven libraries it is a battle hardened library being used
 
 ##Rabbitmq API
 
-###Creating The Middleware
+### 1) Creating The Middleware
 
 creating the middleware consists of three steps
 
 * **Create the exchange**
 
 ```js
+const exchange = rabbit.createExchange(name,options);
+```
+for available options checkout the amqp library 
+
+```js
+
+example
+
 const exchange = rabbit.createExchange("jibreel.exchange.electric",{"type": "topic"});
 ```
 
@@ -35,7 +43,7 @@ const queue = rabbit.registerQueue("jibreel.queue.tesla","jibreel.exchange.elect
 rabbit.init(exchange,queue);
 ```
 
-###Publishing to an exchange
+### 2) Publishing to an exchange
 
 ```js
 rabbit.publish("tesla",{"ping":"yo"});
