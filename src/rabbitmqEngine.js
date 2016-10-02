@@ -38,8 +38,9 @@ else{
 
 const  connection = amqp.createConnection(options);
 
-    let exchanges = {};
-    let queues = {};
+   let exchanges = {};
+   let queues = {};
+   let _queues = [];
 
     class rabbitmqEngine extends abstactPublishSubscribeEngine {
 
@@ -82,23 +83,15 @@ const  connection = amqp.createConnection(options);
         }
 
         registerQueue(queue_name, exchange_name, routing_key) {
-            return new Promise((resolve) => {
-                connection.on('ready',  () => {
-                    var value = { name: queue_name, routing_key: routing_key }
-                    var key = exchange_name;
-
-                    // if no queues are bound to the exchange prep for binding
-                    if ( typeof queues[exchange_name] === "undefined"){
-                        queues[exchange_name] = [value];
-                    }
-                    else{
-                        // if there are  queues that  are bound to the exchange check whether queue is bound
-                        queues[exchange_name].push(value)
-                    }
-
-                    resolve(queues[exchange_name]);
+         return new Promise(function (resolve) {
+                    let value = { name: queue_name, routing_key: routing_key };
+                    let key = exchange_name;
+                    let obj = {};
+                    _queues[ value.name ] = value;
+                    queues[key] = _queues;
+                    console.log( queues )
+                   resolve(queues);
                 });
-            });
         }
 
         publish(routing_key, body) {
