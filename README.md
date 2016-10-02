@@ -50,7 +50,24 @@ rabbit.init(exchange,queue);
 ### 2) Publishing to an exchange
 
 ```js
+rabbit.publish(routing_key,message);
+```
+ **example**
+ 
+```js
 rabbit.publish("tesla",{"ping":"yo"});
+```
+
+### 2) Subscribing from a queue
+
+```js
+rabbit.publish(queue_name,routing_key);
+```
+ **example**
+ 
+```js
+rabbit.subscribe("jibreel.queue.tesla","tesla");
+ */
 ```
 
 
