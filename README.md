@@ -61,7 +61,7 @@ rabbit.publish("tesla",{"ping":"yo"});
 ### 3) Subscribing from a queue
 
 ```js
-rabbit.publish(queue_name,routing_key);
+rabbit.subscribe(queue_name,routing_key);
 ```
  **example**
  
