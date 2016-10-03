@@ -93,6 +93,7 @@ let _queues = {};
                         // Receive messages
                         q.subscribe( (message) => {
                             // Print messages to stdout
+                            // pipe this using request  
                             resolve(message);
                         });
                     });
