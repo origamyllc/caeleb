@@ -84,6 +84,7 @@ let _queues = {};
         }
 
         subscribe(queue_name,routing_key) {
+            let all = [];
             return new Promise( (resolve) => {
                     // Use the default 'amq.topic' exchange
                     connection.queue(queue_name,  (q) => {
@@ -94,7 +95,8 @@ let _queues = {};
                         q.subscribe( (message) => {
                             // Print messages to stdout
                             // pipe this using request  
-                            resolve(message);
+                            all.push(message)
+                            resolve(all);
                         });
                     });
                 });
