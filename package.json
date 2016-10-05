@@ -2,7 +2,7 @@
   "name": "caeleb",
   "description": "middleware for fold.js",
   "author": "prashun javeri <prashun.javeri@monkeypatched.com> (http://monkeypatched.com)",
-  "version": "0.0.1dv",
+  "version": "0.0.1rc",
   "main": "./bin/index.js",
   "license": "MIT",
   "scripts": {
